@@ -1,0 +1,4 @@
+-- ALTER TABLE users
+-- ADD COLUMN twoFactorEnabled BOOLEAN DEFAULT FALSE,
+-- ADD COLUMN twoFactorSecret VARCHAR(255) NULL;
+-- ADD COLUMN twoFARecoveryCodes JSON NULL;

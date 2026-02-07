@@ -1,0 +1,5 @@
+ALTER TABLE accounts
+    CHANGE COLUMN accountType type VARCHAR(50) NOT NULL;
+
+ALTER TABLE accounts
+    MODIFY COLUMN type VARCHAR(50) NOT NULL DEFAULT 'oauth';

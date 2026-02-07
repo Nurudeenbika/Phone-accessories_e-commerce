@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0ffff;
+  --color-primary-100: #e0ffff;
+  --color-primary-200: #b0ffff;
+  --color-primary-300: #80ffff;
+  --color-primary-400: #40ffff;
+  --color-primary-500: #00ffef;
+  --color-primary-600: #00e6d6;
+  --color-primary-700: #00ccbd;
+  --color-primary-800: #00b3a4;
+  --color-primary-900: #00998b;
+  --color-primary-950: #007a6f;
+  --font-family-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Nunito", sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f1f1;
+}
+
+/* Hide scrollbar for horizontal scroll containers */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navbar height utilities */
+:root {
+  --navbar-height: 136px;
+  --navbar-first-row: 80px;
+  --navbar-second-row: 56px;
+  --content-top-offset: 160px; /* navbar + 24px spacing */
+}
+
+/* Utility classes for content positioning below navbar */
+.sticky-below-navbar {
+  position: sticky;
+  top: var(--content-top-offset);
+  z-index: 20;
+}
+
+.content-below-navbar {
+  margin-top: var(--content-top-offset);
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 180px; /* navbar + sticky header + spacing */
+}

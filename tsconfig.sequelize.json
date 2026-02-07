@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "isolatedModules": false,
+    "outDir": "dist",
+    "target": "es2017",
+    "types": ["node"]
+  },
+  "include": [
+    "config/**/*.ts",
+    "models/**/*.ts",
+    "migrations/**/*.ts",
+    "seeders/**/*.ts"
+  ]
+}
