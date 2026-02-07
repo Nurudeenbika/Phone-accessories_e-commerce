@@ -254,7 +254,7 @@ export default function CheckoutClient({ loggedInUser }: CheckoutClientProps) {
       }
 
       const tempOrderId = sessionStorage.getItem("tempOrderId");
-      const publicKey = "pk_live_43bb3c98ec981bf1e857aa3b415aa0fdc5f507b3";
+      const publicKey = process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY;
 
       if (!publicKey) {
         toast.error(
